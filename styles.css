@@ -1,0 +1,22 @@
+body {
+    height: 842px;
+    width: 595px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#TOPBOX {
+    height: 6cm;
+    display: flex;
+    align-items: center;
+    margin-left: 5px; margin-top: 0;
+}
+
+#TOPTIEDOT {
+    margin-right: auto;
+}
+
+img {
+    height: 5cm;
+    float: right;
+}
