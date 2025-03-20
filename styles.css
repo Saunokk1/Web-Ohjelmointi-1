@@ -1,15 +1,32 @@
-body {
-    height: 842px;
-    width: 595px;
+html{
+    height: 100%;
+    margin: auto;
+    width: 960px;
+    overflow: scroll;
+}
+
+.A4 {
+    width: 21cm;
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
+    padding-inline: 10px;
+    padding-top: -15px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    background-color: #00000042;
+    color: white;
+    
 }
+
 
 #TOPBOX {
     height: 6cm;
     display: flex;
     align-items: center;
-    margin-left: 5px; margin-top: 0;
+    
 }
 
 #TOPTIEDOT {
@@ -19,4 +36,118 @@ body {
 img {
     height: 5cm;
     float: right;
+    border-radius: 10px;
 }
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TOPPIEN {
+    margin-top: 3.10cm;
+    margin-bottom: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+hr {
+    background-color: rgb(255, 255, 255);
+    height: 5px;
+}
+
+#sbs {
+    
+}
+
+@-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  .gradient {
+    --size: 750px;
+    --speed: 10s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--size);
+    height: var(--size);
+    -webkit-filter: blur(calc(var(--size) / 5));
+            filter: blur(calc(var(--size) / 5));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(222, 84%, 60%)), to(hsl(164, 79%, 71%)));
+    background-image: linear-gradient(hsl(222, 84%, 60%), hsl(164, 79%, 71%));
+    -webkit-animation: rotate var(--speed) var(--easing) alternate infinite;
+            animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  @media (min-width: 720px) {
+    .gradient {
+      --size: 500px;
+    }
+  }
+  body {
+    background-color: #071c39;
+    inset: 0;
+    place-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  
+  * {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  
+  .tiedot {
+    border-style: solid;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.404);
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    -webkit-text-fill-color: white;
+    margin-top: 40px;
+    width: 400px;
+  }
