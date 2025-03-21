@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskustelusivu</title>
+</head>
+
+<style>
+    
+    #date {
+        font-size: small;
+        color: rgb(192, 192, 192);
+    }
+
+</style>
+<body>
+
+    <header>
+
+        <nav>
+            <a href="../CV Sivu/index.html">CV Sivu</a>
+            <a href="../Työkokemus/index.html">Työkokemukseni</a>
+        </nav>
+
+        <h1>Keskustelusivu</h1>
+
+    </header>
+
+    <div class="comments">
+
+        <div class="comment">
+            <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
+            <p>RaimoPaino82 (raimo@gmail.com)</p>
+                <p>Miksi nunnat ei juo kahvia? Jotta heidän ei rupea tekemään mieli munkkia lmao :DDD</p>
+                <p id="date">19.3.2025 14.35</p>
+                <br>
+        </div>
+
+        <div class="comment">
+            <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
+            <p>MirvaHuutaja69 (mirva@outlook.com)</p>
+                <p>Ootpas sä raimo yks vitsiniekka XoXo</p>
+                <p id="date">20.3.2025 12.17</p>
+                <br>
+        </div>
+
+        <div class="comment">
+            <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
+            <p>MarjaVeitolafan002 (jannepetteri@hotmail.com)</p>
+                <p>Uuu... Mirva taitaa tykätä raimosta :o</p>
+                <p id="date">20.3.2025 13.52</p>
+                <br>
+        </div>
+
+        <div class="comment">
+            <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
+            <h>Turhatkysymykset04 (penavasara@gmail.com)</h3>
+                <p>Ei tämä ole mikään deittialusta @RaimoPaino82 ja @MirvaHuutaja69. Miksette mieluummin käytä tinderiä?</p>
+                <p id="date">21.3.2025 17.18</p>
+                <br>
+        </div>
+
+        <div class="comment">
+            <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
+            <h>ViisasAtte1951 (atteusmatteus@outlook.com</h3>
+                <p>@Turhatkysymykset04 Tuohan oli aika hyvä kysymys. Nimes on harhaanjohtava...</p>
+                <p id="date">22.3.2025 16.27</p>
+                <br>
+        </div>
+
+
+    </div>
+
+    <hr>
+
+
+
+<form action="">
+    <label for="date">Päivämäärä:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+    <label for="user">Käyttäjänimi:</label>
+        <input type="text" id="user" name="user"><br><br>
+
+    <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+    <label for="comment">Kommentti:</label><br>
+        <textarea name="comment" id="comment" style="width: 400px; height: 150px; resize: none;"></textarea><br><br>
+
+    <label for="check">Olet lukenut käyttöhtomme:</label>
+        <input type="checkbox" name="check" id="check"><br><br>
+
+    <select name="menu" id="menu">
+        <option value="kommentti">Kommentti</option>
+        <option value="kysymys">Kysymys</option>
+    </select><br><br>
+
+    <button type="submit" name="submit" id="submit">Lähetä:</button>
+
+</form>
+
+    
+</body>
+</html>
