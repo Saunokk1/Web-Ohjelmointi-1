@@ -30,6 +30,7 @@ p, li {
 
 a {
     color: rgb(170, 0, 0);
+    margin-right: 5px;
 }
 
 a:hover {

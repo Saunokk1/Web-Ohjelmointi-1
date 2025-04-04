@@ -1,0 +1,32 @@
+.flex-container-row {
+    display: flex;
+    border: solid;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: max-content;
+}
+
+.flex-container-column {
+    display: flex;
+    border: solid;
+    flex-direction: column;
+    width: auto;
+    margin: 10px;
+}
+
+.flex-item {
+    border: solid;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.flex-item > img {
+    width: 150px;
+    padding: 10px;
+    float: left;
+}
+
+.flex-item > text {
+    margin-top: 50px;
+}
