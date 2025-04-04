@@ -28,6 +28,27 @@ p, li {
     color: rgb(99, 99, 0);
 }
 
+a {
+    color: rgb(170, 0, 0);
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: grey;
+}
+
+button {
+    background-color: rgb(170, 0, 0);
+    color: white;
+}
+
+button:hover {
+    background-color: red;
+}
+
 section {
     border: solid;
     border-width: 0.01px;
