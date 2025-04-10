@@ -1,0 +1,321 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+.box1 {
+    animation: box1 5s infinite;
+    animation-timing-function: ease-in;
+    background-color: rgb(250, 102, 102);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50px;
+}
+
+@keyframes box1 {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 87vw;
+    }
+
+    100% {
+        left: 0px;
+    }
+
+
+}
+
+.box2 {
+    animation: box2 5s infinite;
+    animation-timing-function: ease-out;
+    background-color: rgb(103, 76, 255);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+}
+
+@keyframes box2 {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 87vw;
+    }
+
+    100% {
+        left: 0px;
+    }
+
+
+}
+
+.box3 {
+    animation: box3 5s infinite;
+    animation-timing-function: linear;
+    background-color: rgb(97, 255, 124);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 150px;
+}
+
+@keyframes box3 {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 87vw;
+    }
+
+    100% {
+        left: 0px;
+    }
+
+}
+
+.bars {
+    position: relative;
+    top: 200px;
+    width: 150px;
+    aspect-ratio: 1.5;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background:
+        var(--c) 0% 50%,
+        var(--c) 10% 50%,
+        var(--c) 20% 50%,
+        var(--c) 30% 50%,
+        var(--c) 40% 50%,
+        var(--c) 50% 50%,
+        var(--c) 60% 50%,
+        var(--c) 70% 50%,
+        var(--c) 80% 50%,
+        var(--c) 90% 50%,
+        var(--c) 100% 50%;
+    background-size: 5% 100%;
+    animation: bars 2s infinite linear;
+}
+
+@keyframes bars {
+
+    0% {
+        background-size: 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%
+    }
+
+    5% {
+        background-size: 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 20%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%
+    }
+
+    10% {
+        background-size: 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 30%, 5% 50%, 5% 30%, 5% 5%, 5% 5%, 5% 5%, 5% 5%
+    }
+
+    15% {
+        background-size: 5% 5%, 5% 5%, 5% 5%, 5% 30%, 5% 50%, 5% 70%, 5% 50%, 5% 30%, 5% 5%, 5% 5%, 5% 5%
+    }
+
+    20% {
+        background-size: 5% 5%, 5% 5%, 5% 30%, 5% 50%, 5% 70%, 5% 90%, 5% 70%, 5% 50%, 5% 30%, 5% 5%, 5% 5%
+    }
+
+    25% {
+        background-size: 5% 5%, 5% 30%, 5% 50%, 5% 70%, 5% 90%, 5% 100%, 5% 90%, 5% 70%, 5% 50%, 5% 30%, 5% 5%
+    }
+
+    30% {
+        background-size: 5% 30%, 5% 50%, 5% 70%, 5% 90%, 5% 100%, 5% 90%, 5% 100%, 5% 90%, 5% 70%, 5% 50%, 5% 30%
+    }
+
+    35% {
+        background-size: 5% 50%, 5% 70%, 5% 90%, 5% 100%, 5% 90%, 5% 80%, 5% 90%, 5% 100%, 5% 90%, 5% 70%, 5% 50%
+    }
+
+    40% {
+        background-size: 5% 70%, 5% 90%, 5% 100%, 5% 90%, 5% 80%, 5% 70%, 5% 80%, 5% 90%, 5% 100%, 5% 90%, 5% 70%
+    }
+
+    45% {
+        background-size: 5% 90%, 5% 100%, 5% 90%, 5% 80%, 5% 70%, 5% 60%, 5% 70%, 5% 80%, 5% 90%, 5% 100%, 5% 90%
+    }
+
+    50% {
+        background-size: 5% 100%, 5% 90%, 5% 80%, 5% 70%, 5% 60%, 5% 50%, 5% 60%, 5% 70%, 5% 80%, 5% 90%, 5% 100%
+    }
+
+    55% {
+        background-size: 5% 90%, 5% 80%, 5% 70%, 5% 60%, 5% 50%, 5% 40%, 5% 50%, 5% 60%, 5% 70%, 5% 80%, 5% 90%
+    }
+
+    60% {
+        background-size: 5% 80%, 5% 70%, 5% 60%, 5% 50%, 5% 40%, 5% 30%, 5% 40%, 5% 50%, 5% 60%, 5% 70%, 5% 80%
+    }
+
+    65% {
+        background-size: 5% 70%, 5% 60%, 5% 50%, 5% 40%, 5% 30%, 5% 20%, 5% 30%, 5% 40%, 5% 50%, 5% 60%, 5% 70%
+    }
+
+    70% {
+        background-size: 5% 60%, 5% 50%, 5% 40%, 5% 30%, 5% 20%, 5% 10%, 5% 20%, 5% 30%, 5% 40%, 5% 50%, 5% 60%
+    }
+
+    75% {
+        background-size: 5% 50%, 5% 40%, 5% 30%, 5% 20%, 5% 10%, 5% 5%, 5% 10%, 5% 20%, 5% 30%, 5% 40%, 5% 50%
+    }
+
+    80% {
+        background-size: 5% 40%, 5% 30%, 5% 20%, 5% 10%, 5% 5%, 5% 5%, 5% 5%, 5% 10%, 5% 20%, 5% 30%, 5% 40%
+    }
+
+    85% {
+        background-size: 5% 30%, 5% 20%, 5% 10%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 10%, 5% 20%, 5% 30%
+    }
+
+    90% {
+        background-size: 5% 20%, 5% 10%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 10%, 5% 20%
+    }
+
+    95% {
+        background-size: 5% 10%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% %
+    }
+
+    100% {
+        background-size: 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%, 5% 5%;
+    }
+}
+
+
+.loadingbar {
+    position: relative;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loadingbar h1 {
+    position: relative;
+    top: 20px;
+}
+
+.loading {
+    display: flex;
+    gap: 1px;
+}
+
+.box {
+    height: 25px;
+    aspect-ratio: 1;
+    background-color: gray;
+    animation: loading 2s infinite steps(1);
+}
+
+@keyframes loading {
+    0% {
+        background-color: gray;
+    }
+
+    10% {
+        background-color: orange;
+    }
+
+    20% {
+        background-color: gray;
+    }
+}
+
+.loading .box:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading .box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading .box:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading .box:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loading .box:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loading .box:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.loading .box:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.loading .box:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.loading .box:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.loading .box:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+.loaderbox {
+    width: min-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 300px;
+    text-align: center;
+}
+
+.loaderbox h1 {
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.loaderbar {
+    background: repeating-linear-gradient(45deg,
+            #606dbc,
+            #606dbc 10px,
+            #465298 10px,
+            #465298 20px);
+    background-size: ;
+    border: solid 5px rgb(73, 73, 73);
+    border-radius: 20px;
+    width: 198px;
+    height: 20px;
+    animation: barStripe 5s linear infinite;
+}
+
+@keyframes barStripe {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200px 0;
+    }
+}

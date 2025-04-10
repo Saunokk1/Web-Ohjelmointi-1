@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,21 @@
 </head>
 
 <style>
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
     table {
         background-color: grey;
+        border-collapse: collapse;
+        position: relative;
     }
 
     td {
-        display: inline-block;
+        ps
     }
-    
+
 
     .keit {
         background-color: rgb(180, 180, 209);
@@ -42,6 +50,7 @@
         height: 200px;
         vertical-align: bottom;
         border: solid;
+        border-right: ;
     }
 
     .suihku {
@@ -56,11 +65,9 @@
         width: 200px;
         height: 250px;
         margin-top: 0px;
-        position: relative;
-        top: 50px;
-        margin-top: -50px;
+
     }
-    
+
     .mak2 {
         background-color: yellow;
         width: 200px;
@@ -74,28 +81,30 @@
         height: 200px;
         vertical-align: bottom;
     }
-
-    
-
-
-
 </style>
 
 <body>
 
     <table>
         <tr id="ylä">
-            <td class="keit"></td>   </td> <td class="sauna"></td> <td class="suihku"></td> <td class="mak1"></td>
+            <td class="keit"></td>
+            </td>
+            <td class="sauna"></td>
+            <td class="suihku"></td>
+            <td class="mak1"></td>
         </tr>
 
-        
+
 
         <tr>
-            <td class="olo"></td> <td class="ete"></td> </td> <td class="mak2"></td>    
+            <td class="olo"></td>
+            <td class="ete" colspan="2"></td>
+            <td class="mak2"></td>
         </tr>
 
-        
+
     </table>
-    
+
 </body>
+
 </html>
