@@ -1,6 +1,12 @@
+html {
+    display: flex;
+    justify-content: center;
+}
+
 body {
     background-color: #F5EEDD;
-    margin: 0;
+    width: 1000px;
+    border: solid 3px black;
 }
 
 .container {

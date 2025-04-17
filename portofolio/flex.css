@@ -3,8 +3,9 @@
     border: solid;
     flex-direction: row;
     justify-content: space-evenly;
-    width: max-content;
-}
+    flex-wrap: nowrap; /* ensures items stay in one row */
+    width: 100%;       /* fills the body */
+    overflow-x: auto;  /* enables horizontal scroll if needed */}
 
 .flex-container-column {
     display: flex;
@@ -22,7 +23,8 @@
 }
 
 .flex-item > img {
-    width: 150px;
+    max-width: 150px;
+    width: 100%;
     padding: 10px;
     float: left;
 }
