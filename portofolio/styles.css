@@ -7,11 +7,12 @@ body {
     min-height: 100vw;
     display: grid;
     grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "footer";
+    "header header"
+    "nav nav"
+    "menu content"
+    "footer footer";
     grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 0.5fr 3fr;
 }
 
 .container > div {
@@ -32,6 +33,16 @@ body {
     justify-content: space-around;
     background-color: #077A7D;
     -webkit-text-fill-color: white;
+}
+
+.menu {
+    grid-area: menu;
+    border-right: solid 1px grey;
+}
+
+.menu > a.active::before {
+    content: "→ ";
+    color: red;
 }
 
 .content {
@@ -77,14 +88,6 @@ a {
     color: rgb(170, 0, 0);
 }
 
-a:hover {
-    color: red;
-}
-
-a:visited {
-    color: grey;
-}
-
 button {
     background-color: rgb(170, 0, 0);
     color: white;
@@ -92,11 +95,4 @@ button {
 
 button:hover {
     background-color: red;
-}
-
-section {
-    border: solid;
-    border-width: 0.01px;
-    margin-bottom: 5px;
-    border-color: rgb(255, 255, 255);
 }
