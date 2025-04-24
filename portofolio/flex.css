@@ -3,9 +3,10 @@
     border: solid;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: nowrap; /* ensures items stay in one row */
-    width: 100%;       /* fills the body */
-    overflow-x: auto;  /* enables horizontal scroll if needed */}
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+}
 
 .flex-container-column {
     display: flex;

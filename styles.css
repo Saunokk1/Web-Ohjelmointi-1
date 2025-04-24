@@ -20,39 +20,47 @@ body {
     grid-template-rows: auto auto 1fr auto;
 }
 
-.container > div {
-    padding: 10px;
-}
-
 .header {
     grid-area: header;
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
     background-color: #06202B;
     -webkit-text-fill-color: white;
+    padding: 1em;
+    padding-left: 3em;
 }
 
 .nav {
     grid-area: nav;
     display: flex;
-    justify-content: space-around;
+    gap: 3em;
     background-color: #077A7D;
     -webkit-text-fill-color: white;
+    padding: 1em;
+    padding-left: 3em;
 }
 
 .content {
     grid-area: content;
     margin: 10px;
+    padding: 5em;
+    padding-left: 3em;
 }
 
 .footer {
     grid-area: footer;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     height: 50px;
     background-color: #7AE2CF;
     align-items: center;
     -webkit-text-fill-color: rgb(0, 0, 0);
+}
+
+.footer > a {
+    padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,8 +109,7 @@ button:hover {
 }
 
 section {
-    border: solid;
+    border: none;
     border-width: 0.01px;
     margin-bottom: 5px;
-    border-color: rgb(255, 255, 255);
 }
