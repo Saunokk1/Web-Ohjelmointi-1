@@ -88,6 +88,10 @@ body {
     padding-left: 3em;
 }
 
+.menu > ul > li {
+    margin-bottom: 5px;
+}
+
 ul {
     list-style: none;
 
