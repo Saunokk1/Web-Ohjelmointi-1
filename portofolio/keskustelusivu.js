@@ -1,5 +1,5 @@
-function hello() {
-    alert("Keskustelusivu avattu.");
+function avaus() {
+    console.log("Keskustelusivu avattu.");
 }
 
-hello()
+avaus()

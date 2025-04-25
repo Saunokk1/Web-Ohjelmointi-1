@@ -1,5 +1,5 @@
-function hello() {
-    alert("FLEX harjoite avattu.");
+function avaus() {
+    console.log("FLEX harjoite avattu.");
 }
 
-hello()
+avaus()

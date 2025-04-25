@@ -1,5 +1,6 @@
-function hello() {
-    alert("Video CV avattu.");
+function avaus() {
+    console.log("Video CV avattu.");
 }
 
-hello()
+
+avaus()

@@ -1,5 +1,9 @@
-function hello() {
-    alert("CV-sivu avattu.");
+function avaus() {
+    console.log("CV-sivu avattu.");
 }
 
-hello()
+function hello() {
+    alert("Hello world!");
+}
+
+avaus()

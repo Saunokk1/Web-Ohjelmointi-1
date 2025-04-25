@@ -1,5 +1,5 @@
-function hello() {
-    alert("Portofolio Pääsivu avattu.");
+function avaus() {
+    console.log("Portofolio Pääsivu avattu.");
 }
 
-hello()
+avaus()

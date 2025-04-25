@@ -1,5 +1,7 @@
-function hello() {
-    alert("Työkokemukset avattu.");
+function avaus() {
+    console.log("Työkokemukset avattu.");
 }
 
-hello()
+
+
+avaus()
