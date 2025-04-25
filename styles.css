@@ -3,6 +3,18 @@ html {
     justify-content: center;
 }
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("./fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("./fonts/Noto_Sans/static/NotoSans-Light.ttf");
+    font-weight: normal;
+}
+
 body {
     background-color: #F5EEDD;
     width: 1000px;
@@ -52,9 +64,9 @@ body {
     display: flex;
     justify-content: center;
     height: 50px;
-    background-color: #7AE2CF;
+    background-color: #077A7D;
     align-items: center;
-    -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 .footer > a {
@@ -63,8 +75,24 @@ body {
     padding-bottom: 3em;
 }
 
+.juuso {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.juuso-tiedot {
+    display: flex;
+    flex-direction: column;
+}
+
+.juuso-img {
+    width: 200px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(152, 152, 255);
+    color: #7AE2CF;
+    font-family: "Bebas Neue";
 }
 
 h1 {
@@ -83,20 +111,34 @@ h4 {
     font-size: 18px;
 }
 
+section {
+    color: #000000;
+    font-family: "Bebas Neue";
+    cursor: pointer;
+}
+
+
+
+summary::marker {
+    font-size: 20px;
+}
+
 p, li {
-    color: rgb(99, 99, 0);
+    color: rgb(0, 0, 0);
+    font-family: "Noto Sans";
 }
 
 a {
-    color: rgb(170, 0, 0);
+    color: #7AE2CF;
+    font-family: "Noto Sans";
 }
 
 a:hover {
-    color: red;
+    color: #077A7D;
 }
 
 a:visited {
-    color: grey;
+    color: #066568;
 }
 
 button {
@@ -113,3 +155,9 @@ section {
     border-width: 0.01px;
     margin-bottom: 5px;
 }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }

@@ -3,6 +3,18 @@ html {
     justify-content: center;
 }
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../fonts/Noto_Sans/static/NotoSans-Light.ttf");
+    font-weight: normal;
+}
+
 body {
     background-color: #F5EEDD;
     width: 1000px;
@@ -19,9 +31,6 @@ body {
     "footer footer";
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr 3fr;
-}
-
-.container > div {
 }
 
 .header {
@@ -47,7 +56,7 @@ body {
 
 .menu {
     grid-area: menu;
-    border-right: solid 1px grey;
+    border-right: solid 1px #077A7D;
     padding-top: 2em;
     padding-left: 3em;
 }
@@ -64,6 +73,7 @@ li {
 li::before {
     content: "";
     position: absolute;
+    top: 2.5px;
     left: -15px;
 }
 
@@ -84,9 +94,9 @@ li.active:before {
     grid-area: footer;
     display: flex;
     justify-content: center;
-    background-color: #7AE2CF;
+    background-color: #077A7D;
     align-items: center;
-    -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 .footer > a {
@@ -95,8 +105,17 @@ li.active:before {
     padding-bottom: 3em;
 }
 
+.comment > img {
+    padding-right: 10px;
+}
+
+dialog {
+    border-radius: 10px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(152, 152, 255);
+    color: #7AE2CF;
+    font-family: "Bebas Neue";
 }
 
 h1 {
@@ -116,11 +135,13 @@ h4 {
 }
 
 p, li {
-    color: rgb(99, 99, 0);
+    color: rgb(0, 0, 0);
+    font-family: "Noto Sans";
 }
 
 a {
-    color: rgb(170, 0, 0);
+    color: #077A7D;
+    font-family: "Noto Sans";
 }
 
 button {
