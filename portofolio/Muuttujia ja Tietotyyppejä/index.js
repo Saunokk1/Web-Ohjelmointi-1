@@ -5,26 +5,50 @@ b = 5
 c = 7;
 d = 15;
 
-function summa() {
-    vastaus = a + b;
+function summa(eka, toka) {
+    vastaus = eka + toka;
     alert(vastaus);
     return vastaus;
 }
 
-function vahennys() {
-    vastaus = b - c;
+function vahennys(a, b) {
+    vastaus = a - b;
     alert(vastaus);
     return vastaus;
 }
 
-function kerto() {
-    vastaus = c * d;
+function kerto(a, b) {
+    vastaus = a * b;
     alert(vastaus);
     return vastaus;
 }
 
-function jako() {
-    vastaus = d / a;
+function jako(a, b) {
+    vastaus = a / b;
     alert(vastaus);
     return vastaus;
+}
+
+function laskin_summa() {
+    eka = Number(document.getElementById('numero1').value);
+    toka = Number(document.getElementById('numero2').value);
+    vastaus = summa(eka, toka);
+}
+
+function laskin_vahennys() {
+    eka = Number(document.getElementById('numero1').value);
+    toka = Number(document.getElementById('numero2').value);
+    vastaus = vahennys(eka, toka);
+}
+
+function laskin_kerto() {
+    eka = Number(document.getElementById('numero1').value);
+    toka = Number(document.getElementById('numero2').value);
+    vastaus = kerto(eka, toka);
+}
+
+function laskin_jako() {
+    eka = Number(document.getElementById('numero1').value);
+    toka = Number(document.getElementById('numero2').value);
+    vastaus = jako(eka, toka);
 }
