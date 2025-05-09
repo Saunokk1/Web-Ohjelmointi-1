@@ -13,7 +13,7 @@
 
 <style>
     
-    #date {
+    #paiva {
         font-size: small;
         color: rgb(192, 192, 192);
     }
@@ -69,7 +69,7 @@
                 <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
                 <p>RaimoPaino82 (raimo@gmail.com)</p>
                     <p>Miksi nunnat ei juo kahvia? Jotta heidän ei rupea tekemään mieli munkkia lmao :DDD</p>
-                    <p id="date">19.3.2025 14.35</p>
+                    <p id="paiva">19.3.2025 14.35</p>
                     <br>
             </div>
 
@@ -77,7 +77,7 @@
                 <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
                 <p>MirvaHuutaja69 (mirva@outlook.com)</p>
                     <p>Ootpas sä raimo yks vitsiniekka XoXo</p>
-                    <p id="date">20.3.2025 12.17</p>
+                    <p id="paiva">20.3.2025 12.17</p>
                     <br>
             </div>
 
@@ -85,7 +85,7 @@
                 <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
                 <p>MarjaVeitolafan002 (jannepetteri@hotmail.com)</p>
                     <p>Uuu... Mirva taitaa tykätä raimosta :o</p>
-                    <p id="date">20.3.2025 13.52</p>
+                    <p id="paiva">20.3.2025 13.52</p>
                     <br>
             </div>
 
@@ -93,7 +93,7 @@
                 <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
                 <p>Turhatkysymykset04 (penavasara@gmail.com)</p>
                     <p>Ei tämä ole mikään deittialusta @RaimoPaino82 ja @MirvaHuutaja69. Miksette mieluummin käytä tinderiä?</p>
-                    <p id="date">21.3.2025 17.18</p>
+                    <p id="paiva">21.3.2025 17.18</p>
                     <br>
             </div>
 
@@ -101,7 +101,7 @@
                 <img src="default.jpg" alt="" style="width: 25px; float: left; margin-top: -5px;">
                 <p>ViisasAtte1951 (atteusmatteus@outlook.com)</p>
                     <p>@Turhatkysymykset04 Tuohan oli aika hyvä kysymys. Nimes on harhaanjohtava...</p>
-                    <p id="date">22.3.2025 16.27</p>
+                    <p id="paiva">22.3.2025 16.27</p>
                     <br>
             </div>
 
@@ -115,7 +115,7 @@
         <dialog id="dialogi">
         <button onclick="closeDialog()">Sulje Kommentointi</button><br><br>
         <form action="">
-            <label for="date">Päivämäärä:</label>
+            <label for="date">Syntymäpäivä:</label>
                 <input type="date" id="date" name="date"><br><br>
 
             <label for="user">Käyttäjänimi:</label>
@@ -130,12 +130,12 @@
             <label for="check">Olet lukenut käyttöhtomme:</label>
                 <input type="checkbox" name="check" id="check"><br><br>
 
-            <select name="menu" id="menu">
+            <select name="type" id="type">
                 <option value="kommentti">Kommentti</option>
                 <option value="kysymys">Kysymys</option>
             </select><br><br>
 
-            <button type="submit" name="submit" id="submit">Lähetä:</button>
+            <button onclick="send(event)" type="submit" name="submit" id="submit">Lähetä:</button>
 
         </form>
         </dialog>
