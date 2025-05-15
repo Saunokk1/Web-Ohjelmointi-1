@@ -35,15 +35,31 @@ const henkilot = [
             }
             ];
 
-var rivit = document.getElementById('rivit');
-    rivit.innerHTML = "";
-
 function luoRivit() {
+    var rivit = document.getElementById('rivit');
+    rivit.innerHTML = "";
+    väli = "";
+
     for (var henkilo of henkilot) {
         var rivi = document.createElement('tr');
 
-        for (const [key, value] of Object.entries(henkilo)) {
+        for (var [key, value] of Object.entries(henkilo)) {
             var solu = document.createElement('td');
+
+            if (key == "age") {
+
+                if (value > 17) {
+                    value = value + "🍺"
+                }
+            }
+
+            else if (key == "job") {
+
+                if (value.toLowerCase() == "opiskelija") {
+                    value = value + "🎓"
+                }
+            }
+
             solu.innerHTML = value;
             console.log(`${value}`);
             rivi.append(solu);
@@ -51,6 +67,31 @@ function luoRivit() {
         
         rivit.append(rivi)
     }
+}
+
+function lisääHenkilö(event) {
+    event.preventDefault();
+    
+    var nimi = document.getElementById('nimi').value
+    var ikä = Number(document.getElementById('ikä').value)
+    var työ = document.getElementById('työ').value
+    var ajokortti = Boolean(document.getElementById('ajokortti').value)
+    
+    if (ikä < 0) {
+        alert("Iän pitää olla positiivinen luku!")
+    }
+
+    else {
+        var henkilotNew = {}
+        henkilotNew.name = nimi
+        henkilotNew.age = ikä
+        henkilotNew.job = työ
+        henkilotNew.driversLicense = ajokortti
+
+        henkilot.push(henkilotNew)
+        luoRivit()
+    }
+
 }
 
 luoRivit()

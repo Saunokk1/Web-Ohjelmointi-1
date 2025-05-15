@@ -62,6 +62,25 @@
                     
                 </tbody>
             </table>
+
+            <form action="">
+                <label for="nimi">Nimi:</label>
+                <input type="text" id="nimi"><br><br>
+
+                <label for="ikä">Ikä:</label>
+                <input type="number" id="ikä"><br><br>
+
+                <label for="työ">Työ:</label>
+                <input type="text" id="työ"><br><br>
+
+                <label for="ajokortti">Ajokortti:</label>
+                <select name="ajokorti" id="ajokortti">
+                    <option value="true">kyllä</option>
+                    <option value="">ei</option>
+                </select><br><br>
+
+                <button onclick="lisääHenkilö(event)">Lähetä</button>
+            </form>
     
         </div>
         <div class="footer">

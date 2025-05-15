@@ -98,23 +98,23 @@ body {
     margin-bottom: 5px;
 }
 
-ul {
+.menu > ul {
     list-style: none;
 
 }
 
-li {
+.menu > li {
     position: relative;
 }
 
-li::before {
+.menu > li::before {
     content: "";
     position: absolute;
     top: 2.5px;
     left: -15px;
 }
 
-li.active:before {
+.menu > li.active:before {
     content: "▶ ";
     color: black;
     font-size: 12px;
@@ -171,7 +171,7 @@ h4 {
     font-size: 18px;
 }
 
-p, li, th {
+p, li, th, label {
     color: rgb(0, 0, 0);
     font-family: "Noto Sans";
 }
@@ -186,11 +186,21 @@ a {
     font-family: "Noto Sans";
 }
 
-button {
+button, .submit {
     background-color: rgb(170, 0, 0);
     color: white;
 }
 
-button:hover {
+button:hover, .submit:hover {
     background-color: red;
+}
+
+table {
+    margin-bottom: 25px;
+    border-collapse: separate;       
+}
+
+td, tr {
+    padding-right: 15px;
+    min-width: 40px;
 }
