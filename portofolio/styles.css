@@ -88,7 +88,10 @@ body {
     padding-top: 2em;
     padding-left: 3em;
     padding-right: 1em;
+<<<<<<< HEAD
     min-width: 211px;
+=======
+>>>>>>> 81a8f1295bca9b9141f46c7b7efd1dfca5798cb8
 }
 
 .menu > ul > li {
