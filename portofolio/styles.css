@@ -43,7 +43,7 @@ html {
 }
 
 body {
-    background-color: #F5EEDD;
+    background-color: #ffffff;
     width: 1000px;
     border: solid 3px black;
     max-width: 1000px;
@@ -95,7 +95,7 @@ body {
 }
 
 .menu > ul > li {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .menu > ul {
@@ -103,18 +103,18 @@ body {
 
 }
 
-.menu > li {
+li {
     position: relative;
 }
 
-.menu > li::before {
+li::before {
     content: "";
     position: absolute;
     top: 2.5px;
     left: -15px;
 }
 
-.menu > li.active:before {
+li.active::before {
     content: "▶ ";
     color: black;
     font-size: 12px;

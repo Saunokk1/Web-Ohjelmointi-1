@@ -52,3 +52,14 @@ function laskin_jako() {
     toka = Number(document.getElementById('numero2').value);
     vastaus = jako(eka, toka);
 }
+
+function showTime() {
+    paivamaara = document.getElementById('paivamaara').value
+    aika = document.getElementById('aika').value
+    paivaJaAika = document.getElementById('paivaJaAika').value
+    viikonpaiva = document.getElementById('viikonpaiva').value
+    kuukausi = document.getElementById('kuukausi').value
+
+    const currentDate = new Date()
+    paivamaara.innerHTML() = currentDate
+}
