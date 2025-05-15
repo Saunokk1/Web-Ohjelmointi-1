@@ -4,13 +4,18 @@ function avaus() {
 
 avaus()
 
-function send() {
-    var date = document.getElementById('date');
-    email = document.getElementById('email');
-    comment = document.getElementById('comment');
-    user = document.getElementById('user');
-    check = document.getElementById('check');
-    menu = document.getElementById('menu');
-
-    console.log(date);
+function send(event) {
+    event.preventDefault();
+    date = document.getElementById('date').value
+    email = document.getElementById('email').value
+    type = document.getElementById('type').value
+    check = document.getElementById('check').value
+    comment = document.getElementById('comment').value
+    
+    console.log("Birthday:", date)
+    console.log("Email:", email)
+    console.log("Comment Type:", type)
+    console.log("User Agreement:", check)
+    console.log("Comment:", comment)
+    closeDialog()
 }

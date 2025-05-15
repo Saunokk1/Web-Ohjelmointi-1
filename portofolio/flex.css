@@ -14,6 +14,7 @@
     flex-direction: column;
     width: auto;
     margin: 10px;
+    min-width: 177px;
 }
 
 .flex-item {
@@ -21,11 +22,12 @@
     font-size: 30px;
     padding: 10px;
     margin: 10px;
+    min-height: 224px;
 }
 
 .flex-item > img {
     max-width: 150px;
-    width: 100%;
+    width: 95%;
     padding: 10px;
     float: left;
 }
