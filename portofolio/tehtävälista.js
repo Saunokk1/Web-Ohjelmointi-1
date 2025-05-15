@@ -12,15 +12,25 @@ function paivitaLista() {
 }
 
 function lisaa() {
-    syöte = document.getElementById('syöte').value
-    lista.push(syöte)
-    console.log(lista)
-    paivitaLista()
+    syöte = document.getElementById('tekstiSyöte').value
+    toisto = document.getElementById('numeroSyöte').value
+    
+    for (loop = 0; toisto > loop; toisto--) {
+        lista.push(syöte)
+        console.log(lista)
+        paivitaLista()
+    }
+    
 }
 
 function poista() {
-    lista.pop()
-    paivitaLista()
+    syöte = document.getElementById('tekstiSyöte').value
+    toisto = document.getElementById('numeroSyöte').value
+    
+    for (loop = 0; toisto > loop; toisto--) {
+        lista.pop()
+        paivitaLista()
+    }
 }
 
 paivitaLista()
