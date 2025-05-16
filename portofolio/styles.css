@@ -204,3 +204,22 @@ td, tr {
     padding-right: 15px;
     min-width: 40px;
 }
+
+#veijo > h2, #elvira > h2, #mehdi > h2, #tuuli > h2 {
+    margin-bottom: 15px;
+}
+
+.sectionBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionRow {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#elvira {
+    margin-left: 29px;
+}

@@ -92,3 +92,79 @@ function showTime() {
     kuukausiP.innerHTML = kuu
     kuukausi.append(kuukausiP)
 }
+
+
+var veijoOikeudet = new Set(['luku', 'poisto']);
+var elviraOikeudet = new Set(['luku', 'kirjoitus', 'muokkaus']);
+var mehdiOikeudet = new Set(['luku', 'muokkaus', 'poisto']);
+var tuuliOikeudet = new Set(['kirjoitus', 'poisto']);
+
+var veijoUl = document.getElementById('veijo').querySelector('ul');
+veijoUl.innerHTML = "";
+
+for (oikeus of veijoOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    veijoUl.append(element);
+}
+
+var elviraUl = document.getElementById('elvira').querySelector('ul');
+elviraUl.innerHTML = "";
+
+for (oikeus of elviraOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    elviraUl.append(element);
+}
+
+var mehdiUl = document.getElementById('mehdi').querySelector('ul');
+mehdiUl.innerHTML = "";
+
+for (oikeus of mehdiOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    mehdiUl.append(element);
+}
+
+var tuuliUl = document.getElementById('tuuli').querySelector('ul');
+tuuliUl.innerHTML = "";
+
+for (oikeus of tuuliOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    tuuliUl.append(element);
+}
+
+var veijotuuli = document.getElementById('veijotuuli');
+veijotuuli.innerHTML = ""
+
+var veijotuuliOikeudet = veijoOikeudet.union(tuuliOikeudet)
+
+for (oikeus of veijotuuliOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    veijotuuli.append(element);
+}
+
+var mehdielvira = document.getElementById('mehdielvira');
+mehdielvira.innerHTML = "";
+
+var mehdielviraOikeudet = mehdiOikeudet.intersection(elviraOikeudet);
+
+for (oikeus of mehdielviraOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    mehdielvira.append(element)
+}
+
+var elviratuuli = document.getElementById('elviratuuli');
+elviratuuli.innerHTML = "";
+
+var elviratuuliOikeudet = elviraOikeudet.difference(tuuliOikeudet);
+
+for (oikeus of elviratuuliOikeudet) {
+    var element = document.createElement('li');
+    element.innerHTML = oikeus;
+    elviratuuli.append(element)
+}
+
