@@ -53,13 +53,42 @@ function laskin_jako() {
     vastaus = jako(eka, toka);
 }
 
-function showTime() {
-    paivamaara = document.getElementById('paivamaara').value
-    aika = document.getElementById('aika').value
-    paivaJaAika = document.getElementById('paivaJaAika').value
-    viikonpaiva = document.getElementById('viikonpaiva').value
-    kuukausi = document.getElementById('kuukausi').value
+const viikonpaivat = ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"]
+const kuukaudet = ["Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu"]
 
-    const currentDate = new Date()
-    paivamaara.innerHTML() = currentDate
+function showTime() {
+    var paivamaara = document.getElementById('paivamaara');
+    var aika = document.getElementById('aika');
+    var paivaJaAika = document.getElementById('paivaJaAika');
+    var viikonpaiva = document.getElementById('viikonpaiva');
+    var kuukausi = document.getElementById('kuukausi');
+
+    var paivamaaraP = document.createElement('p')
+    var currentDate = new Date();
+    paivamaara.innerHTML = ""
+    paivamaaraP.innerHTML = currentDate.toLocaleDateString();
+    paivamaara.append(paivamaaraP)
+
+    var aikaP = document.createElement('p')
+    aika.innerHTML = ""
+    aikaP.innerHTML = currentDate.toLocaleTimeString();
+    aika.append(aikaP)
+
+    var paivaJaAikaP = document.createElement('p')
+    paivaJaAika.innerHTML = ""
+    paivaJaAikaP.innerHTML = currentDate.toLocaleString();
+    paivaJaAika.append(paivaJaAikaP)
+
+    var viikonpaivaP = document.createElement('p')
+    let paiva = viikonpaivat[currentDate.getDay()]
+    viikonpaiva.innerHTML = ""
+    viikonpaivaP.innerHTML = paiva
+    viikonpaiva.append(viikonpaivaP)
+    
+
+    var kuukausiP = document.createElement('p')
+    let kuu = kuukaudet[currentDate.getDay() - 1]
+    kuukausi.innerHTML = ""
+    kuukausiP.innerHTML = kuu
+    kuukausi.append(kuukausiP)
 }
