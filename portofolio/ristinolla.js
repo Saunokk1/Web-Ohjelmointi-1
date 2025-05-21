@@ -25,11 +25,10 @@ function aclick(event) {
 
     if (row == 1) {
 
-        const pos2 = { row: row + 1, column }
-        const pos3 = { row: row + 2, column }
+        const positions = [pos, { row: row + 1, column }, { row: row + 2, column }]
 
-        if (checkWin(pos, pos2, pos3)) {
-            styleWinAll(pos, pos2, pos3)
+        if (checkWin(positions)) {
+            styleWinAll(positions)
             victory = currentValue
         }
     }
@@ -163,14 +162,12 @@ function cellValueAt(pos) {
     return cellValue(pos.row, pos.column)
 }
 
-function cellValue(row, column) {
+const cellValue = (row, column) => {
     return document.getElementById(`cell-${row}-${column}`).innerHTML
 }
 
-function styleWinAll(pos, pos2, pos3) {
-    styleWinAt(pos)
-    styleWinAt(pos2)
-    styleWinAt(pos3)
+function styleWinAll(positions) {
+    positions.forEach(pos => styleWinAt(pos));
 }
 
 function styleWinAt(pos) {
@@ -181,7 +178,7 @@ function styleWin(row, column) {
     document.getElementById(`cell-${row}-${column}`).classList.add('win')
 }
 
-function checkWin(pos, pos2, pos3) {
-    const currentValue = cellValueAt(pos)
-    return currentValue == cellValueAt(pos2) && currentValue == cellValueAt(pos3)
+function checkWin(positions) {
+    const currentValue = cellValueAt(positions[0])
+    return currentValue == cellValueAt(positions[1]) && currentValue == cellValueAt(positions[2])
 }
