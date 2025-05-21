@@ -21,20 +21,24 @@ function aclick(event) {
     let row = Number(cell.getAttribute("row"))
     let column = Number(cell.getAttribute("col"))
 
+    const pos = { row, column }
+
     if (row == 1) {
-        if (currentValue == document.getElementById(`cell-${row + 1}-${column}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row + 2}-${column}`).innerHTML) {
-                cell.classList.add('win')
-                document.getElementById(`cell-${row + 1}-${column}`).classList.add('win')
-                document.getElementById(`cell-${row + 2}-${column}`).classList.add('win')
-                victory = currentValue
-            }
+
+        const pos2 = { row: row + 1, column }
+        const pos3 = { row: row + 2, column }
+        
+        if (currentValue == cellValueAt(pos2) && currentValue == cellValueAt(pos3)) {
+            styleWinAt(pos)
+            styleWinAt(pos2)
+            styleWinAt(pos3)
+            victory = currentValue
         }
     }
 
     if (row == 2) {
-        if (currentValue == document.getElementById(`cell-${row - 1}-${column}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row + 1}-${column}`).innerHTML) {
+        if (currentValue == cellValue(row - 1, column)) {
+            if (currentValue == cellValue(row + 1, column)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row + 1}-${column}`).classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column}`).classList.add('win')
@@ -44,8 +48,8 @@ function aclick(event) {
     }
 
     if (row == 3) {
-        if (currentValue == document.getElementById(`cell-${row - 1}-${column}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row - 2}-${column}`).innerHTML) {
+        if (currentValue == cellValue(row - 1, column)) {
+            if (currentValue == cellValue(row - 2, column)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column}`).classList.add('win')
                 document.getElementById(`cell-${row - 2}-${column}`).classList.add('win')
@@ -55,8 +59,8 @@ function aclick(event) {
     }
 
     if (column == 1) {
-        if (currentValue == document.getElementById(`cell-${row}-${column + 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row}-${column + 2}`).innerHTML) {
+        if (currentValue == cellValue(row, column + 1)) {
+            if (currentValue == cellValue(row, column + 2)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row}-${column + 1}`).classList.add('win')
                 document.getElementById(`cell-${row}-${column + 2}`).classList.add('win')
@@ -66,19 +70,19 @@ function aclick(event) {
     }
 
     if (column == 2) {
-        if (currentValue == document.getElementById(`cell-${row}-${column - 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row}-${column + 1}`).innerHTML) {
+        if (currentValue == cellValue(row, column - 1)) {
+            if (currentValue == cellValue(row, column + 1)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row}-${column - 1}`).classList.add('win')
                 document.getElementById(`cell-${row}-${column - 1}`).classList.add('win')
                 victory = currentValue
             }
         }
-    } 
+    }
 
     if (column == 3) {
-        if (currentValue == document.getElementById(`cell-${row}-${column - 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row}-${column - 2}`).innerHTML) {
+        if (currentValue == cellValue(row, column - 1)) {
+            if (currentValue == cellValue(row, column - 2)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row}-${column - 1}`).classList.add('win')
                 document.getElementById(`cell-${row}-${column - 2}`).classList.add('win')
@@ -86,10 +90,10 @@ function aclick(event) {
             }
         }
     }
-    
+
     if (row == 1 && column == 1) {
-        if (currentValue == document.getElementById(`cell-${row + 1}-${column + 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row + 2}-${column + 2}`).innerHTML) {
+        if (currentValue == cellValue(row + 1, column + 1)) {
+            if (currentValue == cellValue(row + 2, column + 2)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row + 1}-${column + 1}`).classList.add('win')
                 document.getElementById(`cell-${row + 2}-${column + 2}`).classList.add('win')
@@ -99,8 +103,8 @@ function aclick(event) {
     }
 
     if (row == 2 && column == 2) {
-        if (currentValue == document.getElementById(`cell-${row + 1}-${column + 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row - 1}-${column - 1}`).innerHTML) {
+        if (currentValue == cellValue(row + 1, column + 1)) {
+            if (currentValue == cellValue(row - 1, column - 1)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row + 1}-${column + 1}`).classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column - 1}`).classList.add('win')
@@ -110,8 +114,8 @@ function aclick(event) {
     }
 
     if (row == 3 && column == 3) {
-        if (currentValue == document.getElementById(`cell-${row - 1}-${column - 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row - 2}-${column - 2}`).innerHTML) {
+        if (currentValue == cellValue(row - 1, column - 1)) {
+            if (currentValue == cellValue(row - 2, column - 2)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column - 1}`).classList.add('win')
                 document.getElementById(`cell-${row - 2}-${column - 2}`).classList.add('win')
@@ -121,8 +125,8 @@ function aclick(event) {
     }
 
     if (row == 1 && column == 3) {
-        if (currentValue == document.getElementById(`cell-${row + 1}-${column - 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row + 2}-${column - 2}`).innerHTML) {
+        if (currentValue == cellValue(row + 1, column - 1)) {
+            if (currentValue == cellValue(row + 2, column - 2)) {
                 document.getElementById(`cell-${row + 1}-${column - 1}`).classList.add('win')
                 document.getElementById(`cell-${row + 2}-${column - 2}`).classList.add('win')
                 victory = currentValue
@@ -131,8 +135,8 @@ function aclick(event) {
     }
 
     if (row == 2 && column == 2) {
-        if (currentValue == document.getElementById(`cell-${row + 1}-${column - 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row - 1}-${column + 1}`).innerHTML) {
+        if (currentValue == cellValue(row + 1, column - 1)) {
+            if (currentValue == cellValue(row - 1, column + 1)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row + 1}-${column - 1}`).classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column + 1}`).classList.add('win')
@@ -142,8 +146,8 @@ function aclick(event) {
     }
 
     if (row == 3 && column == 1) {
-        if (currentValue == document.getElementById(`cell-${row - 1}-${column + 1}`).innerHTML) {
-            if (currentValue == document.getElementById(`cell-${row - 2}-${column + 2}`).innerHTML) {
+        if (currentValue == cellValue(row - 1, column + 1)) {
+            if (currentValue == cellValue(row - 2, column + 2)) {
                 cell.classList.add('win')
                 document.getElementById(`cell-${row - 1}-${column + 1}`).classList.add('win')
                 document.getElementById(`cell-${row - 2}-${column + 2}`).classList.add('win')
@@ -155,4 +159,19 @@ function aclick(event) {
     console.log(row)
     console.log(column)
     console.log(victory)
+}
+
+function cellValueAt(pos) {
+    return cellValue(pos.row, pos.column)
+}
+
+function cellValue(row, column) {
+    return document.getElementById(`cell-${row}-${column}`).innerHTML
+}
+
+function styleWinAt(pos) {
+    styleWin(pos.row, pos.column)
+}
+function styleWin(row, column) {
+    document.getElementById(`cell-${row}-${column}`).classList.add('win')
 }
