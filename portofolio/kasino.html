@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tehtävälista</title>
+    <title>Kasino</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="tehtävälista.js" defer></script>
+    <script src="kasino.js" defer></script>
 </head>
 
 <body>
@@ -35,32 +35,32 @@
 
                 <li><a href="Muuttujia ja Tietotyyppejä/index.html">Muuttujia ja Tietotyyppejä</a></li>
 
-                <li class="active"><a href="tehtävälista.html">Tehtävälista</a></li>
+                <li><a href="tehtävälista.html">Tehtävälista</a></li>
                 
                 <li><a href="henkilötiedot.html">Henkilötiedot</a></li>
 
-                <li><a href="kasino.html">Kasino</a></li>
+                <li class="active"><a href="kasino.html">Kasino</a></li>
 
             </ul>
         </div>
 
         <div class="content">
 
-            <h1>Todo</h1>
-        
-            <ul id="table">
+            <h1>Kasino</h1>
 
-            </ul>
+            <h3>Nopanheitto</h3>
+            <div style="margin-top: 2rem;"><p id="noppa"></p></div>
+            <button onclick="noppa()">Noppa</button>
 
-            <label for="numeroSyöte">Kuinka monta kertaa teksti lisätään/poistetaan:</label><br>
-            <input type="number" id="numeroSyöte"><br><br>
+            <h3>Lotto</h3>
+            <p>Arvaa 7 numeroa 1-40 väliltä:</p> 
+            <input type="text" style="width: 30px;" id="input0"> <input type="text" style="width: 30px;" id="input1"> <input type="text" style="width: 30px;" id="input2"> 
+            <input type="text" style="width: 30px;" id="input3"> <input type="text" style="width: 30px;" id="input4"> <input type="text" style="width: 30px;" id="input5"> 
+            <input type="text" style="width: 30px;" id="input6">
+            <div style="margin-top: 2rem;" id="lotto"><p></p></div>
+            <p id="rightGuesses"></p>            
+            <button onclick="lottoGen()">Lotto</button>
 
-            <label for="tekstiSyöte">Teksti:</label><br>
-            <input type="text" id="tekstiSyöte"><br><br>
-
-            <button onclick="lisaa()">Lisää</button>
-            <button onclick="poista()">Poista Viimeisin</button>
-    
         </div>
         <div class="footer">
             <a href="https://tai.fi">Turun Ammatti Instituutti</a>
@@ -70,3 +70,4 @@
 
     </div>
 </body>
+</html>
