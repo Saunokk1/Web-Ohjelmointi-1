@@ -5,6 +5,8 @@ b = 5
 c = 7;
 d = 15;
 
+
+
 function summa(eka, toka) {
     vastaus = eka + toka;
     alert(vastaus);
@@ -51,6 +53,45 @@ function laskin_jako() {
     eka = Number(document.getElementById('numero1').value);
     toka = Number(document.getElementById('numero2').value);
     vastaus = jako(eka, toka);
+}
+
+function abs() {
+    let eka = Number(document.getElementById('numero1').value);
+    vastaus = Math.abs(eka);
+    alert(vastaus);
+}
+
+function sqrt() {
+    let eka = Number(document.getElementById('numero1').value);
+    vastaus = Math.sqrt(eka)
+    alert(vastaus)
+}
+
+function pow() {
+    let eka = Number(document.getElementById('numero1').value);
+    let toka = Number(document.getElementById('numero2').value);
+    vastaus = Math.pow(eka, toka)
+    alert(vastaus)
+}
+function max() {
+    let eka = Number(document.getElementById('numero1').value);
+    let toka = Number(document.getElementById('numero2').value);
+    vastaus = Math.max(eka, toka)
+    alert(vastaus)
+}
+
+function min() {
+    let eka = Number(document.getElementById('numero1').value);
+    let toka = Number(document.getElementById('numero2').value);
+    vastaus = Math.min(eka, toka)
+    alert(vastaus)
+}
+
+function round() {
+    let eka = Number(document.getElementById('numero1').value);
+    let toka = Number(document.getElementById('numero2').value);
+    vastaus = Math.round(eka)
+    alert(vastaus)
 }
 
 const viikonpaivat = ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"]

@@ -1,5 +1,5 @@
 let currentValue = "O"
-victory = ""
+let victory = ""
 
 function aclick(event) {
     const cell = event.target
@@ -21,11 +21,11 @@ function aclick(event) {
     let row = Number(cell.getAttribute("row"))
     let column = Number(cell.getAttribute("col"))
 
-    const pos = { row, column }
+    const pos = cellPos(row, column)
 
     if (row == 1) {
 
-        const positions = [pos, { row: row + 1, column }, { row: row + 2, column }]
+        const positions = [pos, cellPos(row + 1, column), cellPos(row + 2, column)]
 
         if (checkWin(positions)) {
             styleWinAll(positions)
@@ -181,4 +181,8 @@ function styleWin(row, column) {
 function checkWin(positions) {
     const currentValue = cellValueAt(positions[0])
     return currentValue == cellValueAt(positions[1]) && currentValue == cellValueAt(positions[2])
+}
+
+function cellPos(row, column) {
+    return { row, column }
 }
