@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merkkijonot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="merkkijonot.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <p>Juuso Halttu</p>
+            <p>TieV24N</p>
+        </div>
+
+        <div class="nav">
+            <a href="../index.html">CV Sivu</a>
+            <a href="../työkokemus.html">Työkokemus</a>
+        </div>
+
+        <div class="menu">
+
+            <a href="./index.html">Portofolio</a> 
+
+            <ul>
+
+                <li><a href="keskustelusivu.html">Keskustelusivu</a></li>
+
+                <li><a href="video.html">Esitätymis video</a></li>
+
+                <li><a href="flex.html">Flex Harjoite</a></li>
+
+                <li><a href="Muuttujia ja Tietotyyppejä/index.html">Muuttujia ja Tietotyyppejä</a></li>
+
+                <li><a href="tehtävälista.html">Tehtävälista</a></li>
+                
+                <li><a href="henkilötiedot.html">Henkilötiedot</a></li>
+
+                <li><a href="kasino.html">Kasino</a></li>
+
+                <li class="active"><a href="merkkijonot.html">Merkkijonot</a></li>
+
+            </ul>
+        </div>
+
+        <div class="content">
+
+        <h2>Poimi kirjain</h2>
+        <label for="word">Anna sana:</label>
+        <input type="text" id="word"><br><br>
+        <label for="index">Anna indeksi:</label>
+        <input type="number" id="index"><br><br>
+        <button onclick="showLetter()">Näytä</button>
+        <p id="showLet"></p>
+
+        <h2>Löydä Indeksi</h2>
+        <label for="text1">Anna sana:</label>
+        <input type="text" id="text1"><br><br>
+        <label for="text2">Anna etsittävä sana/kirjain:</label>
+        <input type="text" id="text2"><br><br>
+        <button onclick="showIndex()">Näytä</button>
+        <p id="showIndx"></p>
+
+        <h2>Leikkaa Merkkijono</h2>
+        <label for="cuttableWord">Anna sana:</label>
+        <input type="text" id="cuttableWord"><br><br>
+        <label for="index1">Anna indeksi:</label>
+        <input type="number" id="index1"><br><br>
+        <label for="index2">Anna indeksi:</label>
+        <input type="number" id="index2"><br><br>
+        <button onclick="showWord()">Näytä</button>
+        <p id="showWrd"></p>
+
+        <h2>Hae Ja Korvaa</h2>
+        <label for="searchableWord">Anna sana:</label>
+        <input type="text" id="searchableWord"><br><br>
+        <label for="search">Anna indeksi:</label>
+        <input type="text" id="search"><br><br>
+        <label for="replace">Anna indeksi:</label>
+        <input type="text" id="replace"><br><br>
+        <button onclick="showHJK()">Näytä</button>
+        <p id="showHJK"></p>
+
+        <h2>Poikki ja Pinoon</h2>
+        <label for="sana1">Anna sana:</label>
+        <input type="text" id="sana1"><br><br>
+        <label for="sana2">Anna indeksi:</label>
+        <input type="text" id="sana2"><br><br>
+        <button onclick="showPJP()">Näytä</button>
+        <ul id="showPJP"></ul>
+
+    </div>
+        <div class="footer">
+            <a href="https://tai.fi">Turun Ammatti Instituutti</a>
+            <a href="https://turku.inschool.fi/">Turku Wilma</a>
+            <a href="https://taito.edu.turku.fi/">Turku Moodle</a>
+        </div>
+
+    </div>
+</body>
+</html>
